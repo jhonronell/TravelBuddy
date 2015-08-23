@@ -77,7 +77,7 @@ public class EventController {
 
 		//response.sendRedirect("userprofile?);
 		redirectAttributes.addFlashAttribute("eventId", eventId);
-		return "redirect:/user/profile";
+		return "redirect:/user/display";
 		
 	}
 
