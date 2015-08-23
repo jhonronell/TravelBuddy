@@ -3,18 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- Root Context: defines shared resources visible to all other web components -->
-	<bean id="EventServiceImpl" class="com.jronell.serviceImpl.EventServiceImpl">
-		<property name="eventDao" ref="eventDao" />
-	</bean>
-	<!-- Definition for spellChecker bean -->
-	<bean id="eventDao" class="com.jronell.dao.impl.EventDaoImpl">
-	</bean>
 
-	<bean id="InterestTypeServiceImpl" class="com.jronell.serviceImpl.InterestTypeServiceImpl">
-		<property name="interestTypeDao" ref="interestTypeDaoImpl" />
-	</bean>
-	<!-- Definition for spellChecker bean -->
-	<bean id="interestTypeDaoImpl" class="com.jronell.dao.impl.InterestTypeDaoImpl">
-	</bean>
+
 </beans>

@@ -9,18 +9,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>Home</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/WEB-INF/resources/css/reset.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/pure-min.css">
-	<link rel="stylesheet"  href="<c:url value="/resources/css/main.css" />">
-	<link href="plugins/jquery-ui.css" rel="stylesheet">
-	<link href="plugins/jquery.timepicker.css" rel="stylesheet">
-	<script src="plugins/external/jquery/jquery.js"></script>
-	<script src="plugins/jquery-ui.js"></script>
-	<script src="plugins/jquery.timepicker.js"></script>
-	<script src="js/library/library.js"></script>
-	<script src="js/userProfile.js"></script>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/index.js"></script>
+	<link rel="stylesheet"  href="${pageContext.request.contextPath}/resources/css/main.css" />	
+	<link href="${pageContext.request.contextPath}/resources/plugins/jquery-ui.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/resources/plugins/jquery.timepicker.css" rel="stylesheet">
+	<script src="${pageContext.request.contextPath}/resources/plugins/external/jquery/jquery.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/plugins/jquery-ui.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/plugins/jquery.timepicker.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/library/library.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/userProfile.js"></script>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+	<script src="${pageContext.request.contextPath}/resources/js/index.js"></script>
 	
 	<style> 
 		body { font-size:12px; }

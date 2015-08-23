@@ -7,12 +7,11 @@
 <%  pageContext.setAttribute("EventType", EventType.values()); %>
 <%  pageContext.setAttribute("Status", Status.values()); %>
 
-
 <div class="wrapper">
 	<div class="container">
  	<jsp:include page="include/userInfoMin.jsp" />
 
-	<form id="form1" name="form1" method="post"  class="pure-form" action="event">
+	<form id="form1" name="form1" method="post"  class="pure-form" action="save">
 	 
 	<div id="tabs">
 			<ul>

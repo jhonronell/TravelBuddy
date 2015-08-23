@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="EventService" class="com.jronell.serviceImpl.EventServiceImpl">
+		<property name="eventDao" ref="eventDao" />
+	</bean>
+	<!-- Definition for spellChecker bean -->
+	<bean id="eventDao" class="com.jronell.dao.impl.EventDaoImpl">
+	</bean>
+
+	<bean id="InterestTypeService" class="com.jronell.serviceImpl.InterestTypeServiceImpl">
+		<property name="interestTypeDao" ref="interestTypeDaoImpl" />
+	</bean>
+	<!-- Definition for spellChecker bean -->
+	<bean id="interestTypeDaoImpl" class="com.jronell.dao.impl.InterestTypeDaoImpl">
+	</bean>
+	
+	<bean id="AuthenticationService" class="com.jronell.serviceImpl.AuthenticationServiceImpl">
+		<property name="authenticationDao" ref="authenticationDaoImpl" />
+	</bean>
+	<!-- Definition for spellChecker bean -->
+	<bean id="authenticationDaoImpl" class="com.jronell.dao.impl.AuthenticationDaoImpl">
+	</bean>
+	
+	<bean id="BuckerListService" class="com.jronell.serviceImpl.BucketListServiceImpl">
+		<property name="bucketListDao" ref="bucketListDaoImpl" />
+	</bean>
+	<!-- Definition for spellChecker bean -->
+	<bean id="bucketListDaoImpl" class="com.jronell.dao.impl.BucketListDaoImpl">
+	</bean>
+	
+	<bean id="InterestService" class="com.jronell.serviceImpl.InterestServiceImpl">
+		<property name="interestDao" ref="interestDaoImpl" />
+	</bean>
+	<!-- Definition for spellChecker bean -->
+	<bean id="interestDaoImpl" class="com.jronell.dao.impl.InterestDaoImpl">
+	</bean>
+	
+	<bean id="UserService" class="com.jronell.serviceImpl.UserServiceImpl">
+		<property name="userDao" ref="userDaoImpl" />
+	</bean>
+	<!-- Definition for spellChecker bean -->
+	<bean id="userDaoImpl" class="com.jronell.dao.impl.UserDaoImpl">
+	</bean>
+
+</beans>
