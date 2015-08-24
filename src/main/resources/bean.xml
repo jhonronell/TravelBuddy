@@ -11,12 +11,20 @@
 	<bean id="eventDao" class="com.jronell.dao.impl.EventDaoImpl">
 	</bean>
 
-	<bean id="InterestTypeService" class="com.jronell.serviceImpl.InterestTypeServiceImpl">
-		<property name="interestTypeDao" ref="interestTypeDaoImpl" />
+	<bean id="InterestTypeService" class="com.jronell.serviceImpl.InterestTypeServiceImpl"  autowire="byName" >
 	</bean>
 	<!-- Definition for spellChecker bean -->
-	<bean id="interestTypeDaoImpl" class="com.jronell.dao.impl.InterestTypeDaoImpl">
+	<bean id="interestTypeDao" class="com.jronell.dao.impl.InterestTypeDaoImpl">
+		<property name="interestTypeDao" value="interestTypeDao" />
 	</bean>
+	
+	
+<!-- 	<bean id="InterestTypeService" class="com.jronell.serviceImpl.InterestTypeServiceImpl">
+		<property name="interestTypeDao" ref="interestTypeDaoImpl" />
+	</bean>
+	Definition for spellChecker bean
+	<bean id="interestTypeDaoImpl" class="com.jronell.dao.impl.InterestTypeDaoImpl">
+	</bean> -->
 	
 	<bean id="AuthenticationService" class="com.jronell.serviceImpl.AuthenticationServiceImpl">
 		<property name="authenticationDao" ref="authenticationDaoImpl" />
