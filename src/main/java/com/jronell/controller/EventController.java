@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.jronell.dao.InterestTypeDao;
 import com.jronell.model.Event;
 import com.jronell.model.EventAddress;
 import com.jronell.model.EventType;
@@ -27,13 +29,17 @@ import com.jronell.service.InterestTypeService;
 @Controller
 public class EventController {
 
+	@Autowired
+	public InterestTypeService interestTypeService;
+	
 	private static final Logger logger = LoggerFactory.getLogger(EventController.class);
 
 	@RequestMapping(value = "event/create", method = RequestMethod.GET)
 	public String createEvent(Locale locale, Model model) {
 		logger.info("Welcome home! Add Event", locale);
-		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
-		InterestTypeService interestTypeService = (InterestTypeService) context.getBean("InterestTypeService");
+		//ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		//InterestTypeService interestTypeService = (InterestTypeService) context.getBean("InterestTypeService");
+		
 		model.addAttribute("interestTypeList", interestTypeService.getInterestTypes());
 		return "addEvent";
 	}

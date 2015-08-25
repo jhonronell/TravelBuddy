@@ -2,12 +2,15 @@ package com.jronell.serviceImpl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.jronell.dao.InterestTypeDao;
 import com.jronell.model.InterestType;
 import com.jronell.service.InterestTypeService;
 
 public class InterestTypeServiceImpl implements InterestTypeService {
-
+	
+	@Autowired
 	public InterestTypeDao interestTypeDao;
 	
 	@Override
@@ -36,7 +39,7 @@ public class InterestTypeServiceImpl implements InterestTypeService {
 		
 	}
 
-
+	
 	@Override
 	public void setInterestTypeDao(InterestTypeDao interestTypeDao) {
 		// TODO Auto-generated method stub

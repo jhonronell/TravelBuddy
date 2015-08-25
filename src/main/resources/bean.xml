@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	
+	">
+   <context:annotation-config />
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="EventService" class="com.jronell.serviceImpl.EventServiceImpl">
 		<property name="eventDao" ref="eventDao" />
@@ -11,20 +18,14 @@
 	<bean id="eventDao" class="com.jronell.dao.impl.EventDaoImpl">
 	</bean>
 
-	<bean id="InterestTypeService" class="com.jronell.serviceImpl.InterestTypeServiceImpl"  autowire="byName" >
+
+	
+	
+    <bean id="interestTypeService" class="com.jronell.serviceImpl.InterestTypeServiceImpl">
 	</bean>
-	<!-- Definition for spellChecker bean -->
+	
 	<bean id="interestTypeDao" class="com.jronell.dao.impl.InterestTypeDaoImpl">
-		<property name="interestTypeDao" value="interestTypeDao" />
 	</bean>
-	
-	
-<!-- 	<bean id="InterestTypeService" class="com.jronell.serviceImpl.InterestTypeServiceImpl">
-		<property name="interestTypeDao" ref="interestTypeDaoImpl" />
-	</bean>
-	Definition for spellChecker bean
-	<bean id="interestTypeDaoImpl" class="com.jronell.dao.impl.InterestTypeDaoImpl">
-	</bean> -->
 	
 	<bean id="AuthenticationService" class="com.jronell.serviceImpl.AuthenticationServiceImpl">
 		<property name="authenticationDao" ref="authenticationDaoImpl" />
